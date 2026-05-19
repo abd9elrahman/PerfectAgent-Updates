@@ -57,12 +57,11 @@
           "priority": 1,
           "description": "Disable auto login silently",
           "steps": [
-            {
-              "action": "find_and_edit_config",
-              "filename": "app_config.ini",
-              "key": "bAutoLogin",
-              "value": "false"
-            }
+            {"action": "kill_app", "name": "Dental Imaging System.exe"},
+            {"action": "wait", "seconds": 2},
+            {"action": "find_and_edit_config", "filename": "app_config.ini", "key": "bAutoLogin", "value": "false"},
+            {"action": "wait", "seconds": 1},
+            {"action": "find_and_restart", "filename": "Dental Imaging System.exe"}
           ]
         }
       ]
