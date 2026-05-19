@@ -1,0 +1,51 @@
+{
+  "errors": [
+    {
+      "id": "dental_001",
+      "name": "Dental Imaging - Trial Expired Registration",
+      "software": "Dental Imaging System",
+      "pattern": "Trial User|Remaining Days|Register",
+      "solutions": [
+        {
+          "priority": 1,
+          "description": "Auto fill registration form and activate",
+          "steps": [
+            {"action": "wait", "seconds": 1},
+            {"action": "fill_form", "window": "Register", "fields": [
+              {"index": 0, "text": "Dental Imaging System"},
+              {"index": 1, "text": "597815962@qq.com"},
+              {"index": 2, "text": "1"},
+              {"index": 3, "text": "1"},
+              {"index": 4, "text": "7"},
+              {"index": 5, "text": "8"},
+              {"index": 6, "text": "C"},
+              {"index": 7, "text": "E"},
+              {"index": 8, "text": "8"},
+              {"index": 9, "text": "1"},
+              {"index": 10, "text": "A"},
+              {"index": 11, "text": "C"}
+            ]},
+            {"action": "click_until_success", "window": "Register", "button": "Code Activate", "success_text": "Congratulations", "max_attempts": 3}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dental_002",
+      "name": "Dental Imaging - Wrong Mode Selected",
+      "software": "Dental Imaging System",
+      "pattern": "Twain",
+      "solutions": [
+        {
+          "priority": 1,
+          "description": "Close Twain popup and click correct button",
+          "steps": [
+            {"action": "close_window", "window": "Twain"},
+            {"action": "wait", "seconds": 1},
+            {"action": "click_coords", "x": 45, "y": 355}
+          ]
+        }
+      ]
+    }
+  ]
+}
