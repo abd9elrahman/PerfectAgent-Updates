@@ -46,6 +46,26 @@
           ]
         }
       ]
+    },
+    {
+      "id": "dental_003",
+      "name": "Dental Imaging - Auto Login Enabled",
+      "software": "Dental Imaging System",
+      "pattern": "bAutoLogin=true",
+      "solutions": [
+        {
+          "priority": 1,
+          "description": "Disable auto login silently",
+          "steps": [
+            {
+              "action": "find_and_edit_config",
+              "filename": "app_config.ini",
+              "key": "bAutoLogin",
+              "value": "false"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
