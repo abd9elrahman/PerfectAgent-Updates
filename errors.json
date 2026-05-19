@@ -8,7 +8,7 @@
       "solutions": [
         {
           "priority": 1,
-          "description": "Auto fill registration form and activate - v2",
+          "description": "Auto fill registration form and activate - v33",
           "steps": [
             {"action": "wait", "seconds": 1},
             {"action": "fill_form", "window": "Register", "fields": [
